@@ -1,4 +1,4 @@
-  // ************************************List Of Features:***************************************
+// ************************************List Of Features:***************************************
 // SignUp and Login
 // Filter Option
 // Search Option
@@ -66,6 +66,8 @@ app.post('/pic', (req, res) => {
   res.send("Picture uploaded successfully.");
 });
 
+// ***********************************
+
 //Accessing other profiles
 app.get('/profilebrowsing', (req, res) => {
   res.send('This is the profile browsing section!');
@@ -108,15 +110,30 @@ let chat = {new:[
 ]};
 
 //proof of working
-/*app.get("/chat", (req, res) => {
+app.get("/chat", (req, res) => {
   res.send(chat.new);
-});*/
+});
 
 // Route to chat/text
 app.post('/chat', (req, res) => {
   chat.new.push(req.body);
   res.send("Chat initiated successfully.");
 });
+
+// PUT - Modify information of a course
+app.put("/chat/:sender", (req, res) => {
+  var index = chat.new.findIndex(
+    (c) => c.sender === req.params.sender
+  );
+  if (index === -1) {
+    res.status(404).send("sender not found");
+  } else {
+    chat.new[index] = { ...chat.new[index], ...req.body };
+    res.send("Details updated");
+  }
+});
+
+// ***********************************
 
 // ***********************************Quiz
 
@@ -139,6 +156,7 @@ app.post('/quiz', (req, res) => {
   quiz.text.push(req.body);
   res.send("Quiz question sent successfully.");
 });
+// ***********************************
 
 // ***********************************Video Call
 
@@ -160,6 +178,8 @@ app.post('/vc', (req, res) => {
   res.send("Video call initiation successful.");
 });
 
+// ***********************************
+
 // Learn more -> Connect BFF
 app.get('/learnmore/connect_bff', (req, res) => {
   res.send('All about Connect BFF');
@@ -179,3 +199,11 @@ app.get('/*', (req, res) => {
 //post
 //put
 //patch
+//delete
+
+
+
+
+
+
+
