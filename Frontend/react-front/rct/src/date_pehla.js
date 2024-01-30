@@ -31,6 +31,7 @@ export default function SimpleContainer() {
       <Container maxWidth="xlg" className='dabba-3' sx ={{width: '150vh' , marginRight: '0'}}>
         <Box sx={{ marginTop: '10vh'}}>
           {/* Include the BasicCard component */}
+          <div idName='svg'></div>
           <Dat />
         </Box>
       </Container>
