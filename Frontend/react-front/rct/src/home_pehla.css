@@ -1,0 +1,5 @@
+.gradient_background {
+    background: linear-gradient(308deg,rgb(235, 69, 69) 10%, rgba(240,157,157,1) 28%, rgb(235, 69, 69) 47%, rgba(240,157,157,1) 61%, rgb(235, 69, 69) 75%);
+    height: 100vh;
+    width: 100vw;
+  }

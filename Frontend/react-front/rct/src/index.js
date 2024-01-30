@@ -2,24 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import {Link} from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import Appa from './about_app'
+import Date from './date_app'
 import reportWebVitals from './reportWebVitals';
+//import {Link} from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 import Navbar from './navbar';
-import Footer from './footer';
+//import Container from './home_pehla';
+//import Card from './card';
+
 import{BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-      <Navbar />
+  <Navbar />
       <Routes>
         <Route path="/home" element={<App/>}/>
-        <Route path = "/about" element={<p>About Page</p>}/>
-        <Route path = "/login" element={<p>Login Page</p>}/>
+        <Route path = "/about" element={<Appa/>}/>
+        <Route path = "/date" element={<Date/>}/>
         <Route path = "/*" element={<p>No Route Found Here</p>}/>
       </Routes>
-      <Footer />
   </BrowserRouter>
 
 

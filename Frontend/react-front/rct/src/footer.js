@@ -3,9 +3,10 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-      <h1>Footer section it is!</h1>
+      <h6>&copy; CONNECTIONS</h6>
     </div>
   )
 }
 
 export default Footer
+
