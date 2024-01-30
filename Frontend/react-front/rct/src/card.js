@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 
 export default function BasicCard() {
@@ -20,7 +21,7 @@ export default function BasicCard() {
         </Typography>
       </CardContent>
       <CardActions style={{display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Button size="large" sx={{ bgcolor: '#bf5f5f' , color: '#602323' }}>Learn More</Button>
+      <Button color="inherit" sx={{ bgcolor: '#bf5f5f' ,color: 'black', fontWeight: 'bold', mx: 2 }}><Link to="/signup" style={{ textDecoration: 'none', color: 'black' }}>Create Account</Link></Button>
       </CardActions>
     </Card>
     </Container>

@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 
 export default function Date1() {
@@ -20,8 +21,9 @@ export default function Date1() {
         </Typography>
       </CardContent>
       <CardActions style={{display: 'flex', justifyContent: 'center'}}>
-        <Button size="large" sx={{ bgcolor: '#b52e2e' , color: '#fff' }}>Join</Button>
-        <Button size="large" sx={{ bgcolor: '#760000' , color: '#fff' }}>Sign-In</Button>
+      <Button sx={{ bgcolor: '#b52e2e' , mx: 2 , '&:hover': {bgcolor:'#3d0000'}}}><Link to="/login" style={{ textDecoration: 'none',color: 'white' }}>Join</Link></Button>
+      <Button sx={{ bgcolor: '#760000' , mx: 2, '&:hover': {bgcolor:'#3d0000'}}}><Link to="/signup" style={{ textDecoration: 'none',color: 'white' }}>Sign-In</Link></Button>
+
       </CardActions>
     </Cardd>
     </Container>

@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { BrowserRouter, Routes, Link } from "react-router-dom"
 
-export default function Navbar() {
+export default function Navbar3() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar sx={{ bgcolor: "#fff", boxShadow: 10 }} className="AppBar" position="static">
@@ -23,11 +23,6 @@ export default function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}>
             <Link to="/home" style={{ textDecoration: 'none', color: 'black' }}>CONNECTIONS</Link>
           </Typography>
-
-          <Button color="inherit" sx={{ color: 'black', fontWeight: 'bold', mx: 2 }}><Link to="/login" style={{ textDecoration: 'none', color: 'black' }}>Login</Link></Button>
-          <Button color="inherit" sx={{ color: 'black', fontWeight: 'bold', mx: 2 }}><Link to="/signup" style={{ textDecoration: 'none', color: 'black' }}>SignUp</Link></Button>
-          <Button color="inherit" sx={{ color: 'black', fontWeight: 'bold', mx: 2 }}><Link to="/about" style={{ textDecoration: 'none', color: 'black' }}>Abouts</Link></Button>
-
 
         </Toolbar>
       </AppBar>

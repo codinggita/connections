@@ -2,9 +2,10 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import AboutCard from './card.about';  // Import the BasicCard component
+//import {AboutCard,About,Abou} from './card.about';  // Import the BasicCard component
 import './about_pehla.css';
 import About from './about2';
+import AboutCard from './card.about'
 import Abou from './about3';
 
 
@@ -39,5 +40,3 @@ export default function SimpleContainer() {
     </React.Fragment>
   );
 }
-
-
