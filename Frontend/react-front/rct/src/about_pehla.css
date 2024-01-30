@@ -1,0 +1,12 @@
+.gradient_background {
+  background: linear-gradient(313deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 48%, rgba(187,22,22,1) 93%);
+  }
+
+.box-2{
+  background: linear-gradient(322deg, rgba(198,34,34,0.5461834391959909) 36%, rgba(213,119,119,0.27727587617078087) 59%, rgba(187,22,22,1) 100%);
+ }
+
+ .box-3{
+  background: rgb(255,0,0);
+  background: linear-gradient(333deg, rgba(255,0,0,0.2128501058626575) 14%, rgba(218,106,106,1) 78%, rgba(218,106,106,1) 83%);
+ }

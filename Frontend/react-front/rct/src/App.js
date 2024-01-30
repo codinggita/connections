@@ -1,21 +1,14 @@
-/*function App() {
-  return (
-    <div>This is the About page!</div>
-  );
-}
-
-export default App;
-*/
-
-
-
-import './App.css';
-import React, { useEffect } from 'react';
-
-
+// App.js or Home.js
+import React from 'react';
+import HomeContainer from './home';
+import Footer from './footer';
 function App() {
   return (
-    <h1>This is main Body</h1>
+    <div>
+      <HomeContainer />
+      <Footer />
+
+    </div>
   );
 }
 
