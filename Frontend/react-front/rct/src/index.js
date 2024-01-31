@@ -1,31 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Appa from './about_app'
+import App from './home_pehla';
+import Appa from './about_pehla'
 import Login from './login'
-import Date from './date_app'
+import Date from './date_pehla'
 import SignUp from './Signup'
+import SignUp1 from './signup_1'
 import How from './here_how'
+import Hobbies from './hobbies';
+import Pic from './pic';
 import reportWebVitals from './reportWebVitals';
-//import {Link} from "react-router-dom";
-//import { NavLink } from "react-router-dom";
-import Navbar from './navbar';
-//import Container from './home_pehla';
-//import Card from './card';
-
 import{BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
       <Routes>
+      <Route path="/" element={<App/>}/>
         <Route path="/home" element={<App/>}/>
         <Route path = "/about" element={<Appa/>}/>
         <Route path = "/date" element={<Date/>}/>
         <Route path = "/login" element={<Login/>}/>
         <Route path = "/signup" element={<SignUp/>}/>
         <Route path = "/how" element={<How/>}/>
+        <Route path = "/signup_1" element={<SignUp1/>}/>
+        <Route path = "/hobbies" element={<Hobbies/>}/>
+        <Route path = "/pic" element={<Pic/>}/>
+        
 
         <Route path = "/*" element={<p>No Route Found Here</p>}/>
       </Routes>

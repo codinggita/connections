@@ -3,13 +3,13 @@ import Navbar2 from './navbar2'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
+import {  Link } from "react-router-dom"
 
 
 function Login() {
   return (
     <div style={{
-        backgroundColor: 'lavender',
+        background: 'radial-gradient(circle, rgba(236,47,47,0.82) 0%, rgba(230,115,146,1) 50%, rgba(236,47,47,1) 100%)',
       height: '100vh', // sets the height to 100% of the viewport height
       width: '100vw' // sets the width to 100% of the viewport width
     }}>
@@ -41,14 +41,20 @@ function Login() {
         
         </div>
         </Box>
-        <ButtonGroup variant="outlined" aria-label="loading button group" sx={{display:'flex',justifyContent: 'center', alignItems:'center',margin:2}}>
-        <Button>Submit</Button>
-        </ButtonGroup>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:10}}>
+          <Button color="inherit" sx={{ bgcolor: '#980000', color: 'white', fontWeight: 'bold', mx: 2 ,'&:hover': {color:'#000000'}}}>
+          <Link to="/login" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Submit</Link>
+          </Button>
+        </div>
 
 
       
         <p style={{display:'flex',justifyContent: 'center', alignItems:'center', fontSize:20}}>Don't have an  Account</p>
-        <p style={{display:'flex',justifyContent: 'center', alignItems:'center', fontSize:20, textDecoration: 'underline',marginTop:0}}>Sign-Up</p>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:0}}>
+          <Button color="inherit" sx={{ color: 'black', fontWeight: 'bold','&:hover': {color:'#000000'}}}>
+          <Link to="/signup" style={{ color: 'black' }}>Sign-Up</Link>
+          </Button>
+        </div>
 
     </div>
     
