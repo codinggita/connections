@@ -16,11 +16,20 @@ function Appa() {
       <Navbar/>
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="xlg" className='gradient_background'>
+      <Container maxWidth="xlg" className='bgcol'>
+      <div style={{position: 'absolute',
+    left: '70.53%',
+    right: '21.36%',
+    top: '4.7%',
+    bottom: '85.79%',
+    background: 'linear-gradient(180deg, rgba(255, 0, 0, 0.93) 0%, rgba(255, 118, 118, 0.865) 21.6%, rgba(255, 255, 255, 0.79) 48.1%, rgba(234, 130, 130, 0.79) 60%, rgba(216, 21, 21, 0.79) 74.1%, #D81515 88.6%)',
+}}>
+      {/* Your component content goes here */}
+    </div>
         <Box sx={{ height: '100vh', padding: '0vh' }}>
-          {/* Include the BasicCard component */}
-    <Container maxWidth="sm" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Card sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#ffffff'}}>
+    <Container maxWidth="sm"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+
+      <Card  sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#f08686'}}>
         <CardContent>
           <Typography sx={{textAlign: ' center', fontWeight: 'bold', fontSize: 45, color: '#060000'}}>
             Make the first move
@@ -37,7 +46,7 @@ function Appa() {
         <Box sx={{ marginTop: '20vh'}}>
           {/* Include the BasicCard component */}
           <Container maxWidth="sm" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Card sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#ffffff'}}>
+      <Card className='card2' sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#ffffff'}}>
         <CardContent>
           <Typography sx={{textAlign: ' left', fontWeight: 'bold', fontSize: 45, color: '#060000'}}>
             Why Connect Matters
@@ -57,7 +66,7 @@ function Appa() {
         <Box sx={{ marginTop: '20vh'}}>
           {/* Include the BasicCard component */}
           <Container maxWidth="sm" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Card sx={{ minHeight: 100, minWidth: 500, maxHeight: 400, maxWidth: 1000, bgcolor: '#ffffff' }}>
+      <Card className='card1' sx={{ minHeight: 100, minWidth: 500, maxHeight: 400, maxWidth: 1000, bgcolor: '#ffffff' }}>
         <CardContent>
           <Typography sx={{ textAlign: 'left', fontWeight: 'bold', fontSize: 45, color: '#060000' }}>
             The Connect Effect

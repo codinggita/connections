@@ -1,12 +1,21 @@
-.gradient_background {
-  background: linear-gradient(313deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 48%, rgba(187,22,22,1) 93%);
-  }
+.bgcol {
+  background: rgb(255,0,0);
+background: linear-gradient(143deg, rgba(255,0,0,0.34) 14%, rgba(255,255,255,0.5) 46%, rgba(187,22,22,0.86) 76%);
+}
 
 .box-2{
-  background: linear-gradient(322deg, rgba(198,34,34,0.5461834391959909) 36%, rgba(213,119,119,0.27727587617078087) 59%, rgba(187,22,22,1) 100%);
- }
-
+  background: rgb(197,27,27);
+  background: linear-gradient(145deg, rgba(197,27,27,1) 15%, rgba(213,119,119,0.24) 55%, rgba(198,34,34,1) 95%);}
  .box-3{
-  background: rgb(255,0,0);
-  background: linear-gradient(333deg, rgba(255,0,0,0.2128501058626575) 14%, rgba(218,106,106,1) 78%, rgba(218,106,106,1) 83%);
- }
+  background: rgb(218,106,106);
+  background: linear-gradient(158deg, rgba(218,106,106,1) 0%, rgba(255,0,0,0.4) 70%, rgba(218,106,106,0.45) 100%); }
+
+  .card1{
+    background: rgb(111,18,18);
+background: linear-gradient(158deg, rgba(111,18,18,1) 0%, rgba(255,255,255,0.78) 25%, rgba(111,18,18,0.52) 50%, rgba(255,255,255,1) 75%, rgba(111,18,18,0.52) 100%);
+  }
+
+  .card2{
+    background: rgb(193,111,111);
+background: radial-gradient(circle, rgba(193,111,111,1) 0%, rgba(255,255,255,0.78) 25%, rgba(193,111,111,0.53) 50%, rgba(255,255,255,1) 75%, rgba(193,111,111,1) 100%);
+  }
