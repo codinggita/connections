@@ -9,13 +9,21 @@ import SignUp1 from './signup_1';
 function SignUp() {
   return (
     <div style={{
-      background: 'radial-gradient(circle, rgba(246,119,119,1) 0%, rgba(241,172,91,1) 100%)',
-      height: '100vh', // sets the height to 100% of the viewport height
-      width: '100vw' // sets the width to 100% of the viewport width
+      height: '100vh', 
+      width: '100vw', 
+      background: 'linear-gradient(to right,#bbdaff, #ef7b7b)'
     }}>
         
       <Navbar3/>
-      <h2 style={{display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', fontSize: 40, fontFamily: 'unset', marginTop:50}}>Signup into your Account</h2>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center',marginTop: 75}}>
+      <form style={{ bgcolor:'black',background: 'linear-gradient(to right,#ffbbbb,#d0e5ff)',
+        borderRadius: '30px',
+        boxShadow: '0 5px 15px rgba(0, 0, 0, 0.35)',
+        position: 'relative',
+        overflow: 'hidden',
+        width: '768px',
+        minHeight: '480px'}}>
+      <h2 style={{display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', fontSize: 40, fontFamily: 'unset', marginTop:30}}>Signup into your Account</h2>
     <Box
       component="form"
       sx={{
@@ -48,19 +56,21 @@ function SignUp() {
         />
         </div>
         </Box>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:10}}>
-          <Button color="inherit" sx={{ bgcolor: '#980000', color: 'white', fontWeight: 'bold', mx: 2 ,'&:hover': {color:'#000000'}}}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:5}}>
+          <Button color="inherit" sx={{ bgcolor: '#980000', color: 'white', fontWeight: 'bold', mx: 2 ,'&:hover': {bgcolor:'#006698'}}}>
           <Link to= "/signup_1" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Submit</Link>
           </Button>
         </div>
         
-        <p style={{display:'flex',justifyContent: 'center', alignItems:'center', fontSize:20}}>Already have an  Account</p>
+        <p style={{display:'flex',justifyContent: 'center', alignItems:'center', fontSize:20,marginTop:3}}>Already have an  Account</p>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:0}}>
-          <Button color="inherit" sx={{ color: 'white', fontWeight: 'bold','&:hover': {color:'#000000'}}}>
-          <Link to="/login" style={{ color: 'white' }}>Login</Link>
+          <Button color="inherit" sx={{ color: 'black', fontWeight: 'bold',marginTop:0}}>
+          <Link to="/login" style={{ color: 'black' }}>Login</Link>
           </Button>
         </div>
-
+        
+        </form>
+        </div>
 
     </div>
     

@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 
 function How() {
   return (
-    <div>
+    <div style={{background: 'linear-gradient(158deg, rgba(193,111,111,1) 13%, rgba(170,146,173,1) 36%, rgba(187,121,128,1) 66%, rgba(165,153,185,1) 83%, rgba(139,191,255,1) 100%)'}}>
         <Navbar/>
         <Typography sx={{marginTop:5, fontSize: 70 ,fontFamily: 'IM FELL Great Primer SC', marginLeft: 37}}>
             Connect
