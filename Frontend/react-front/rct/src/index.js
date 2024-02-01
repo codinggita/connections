@@ -10,6 +10,7 @@ import SignUp1 from './signup_1'
 import How from './here_how'
 import Hobbies from './hobbies';
 import Pic from './pic';
+import BFF from './bff'
 import reportWebVitals from './reportWebVitals';
 import{BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -27,6 +28,7 @@ root.render(
         <Route path = "/signup_1" element={<SignUp1/>}/>
         <Route path = "/hobbies" element={<Hobbies/>}/>
         <Route path = "/pic" element={<Pic/>}/>
+        <Route path = "/bff" element={<BFF/>}/>
         
 
         <Route path = "/*" element={<p>No Route Found Here</p>}/>
