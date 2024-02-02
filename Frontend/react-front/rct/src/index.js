@@ -11,6 +11,7 @@ import How from './here_how'
 import Hobbies from './hobbies';
 import Pic from './pic';
 import BFF from './bff'
+import Account from './myaccount';
 import reportWebVitals from './reportWebVitals';
 import{BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -29,10 +30,12 @@ root.render(
         <Route path = "/hobbies" element={<Hobbies/>}/>
         <Route path = "/pic" element={<Pic/>}/>
         <Route path = "/bff" element={<BFF/>}/>
+        <Route path = "/myaccount" element={<Account/>}/>
+        <Route path = "/*" element={<p>No Route Found Here</p>}/>
 
         
 
-        <Route path = "/*" element={<p>No Route Found Here</p>}/>
+        
       </Routes>
   </BrowserRouter>
 

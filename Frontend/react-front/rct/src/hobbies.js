@@ -46,7 +46,7 @@ export default function Hobbies() {
     </Box>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:20}}>
           <Button color="inherit" sx={{ bgcolor: '#980000', color: 'white', fontWeight: 'bold', mx: 2 ,'&:hover': {color:'#000000'}}}>
-          <Link to="/login" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Next</Link>
+          <Link to="/pic" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Next</Link>
           </Button>
         </div>
 
