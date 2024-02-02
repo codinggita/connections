@@ -3,6 +3,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import './home_pehla.css';
+
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -19,6 +20,7 @@ export default function SimpleContainer() {
     <React.Fragment>
       <CssBaseline />
       <Container  className='gradient_background' sx={{minWidth: 1519}}>
+
         <Box sx={{ height: '100vh', padding: '0vh' }}>
           <Container maxWidth="sm" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <Card sx={{ minHeight: 250, minWidth: 500 ,maxHeight: 400  ,maxWidth: 1000,  bgcolor: '#f4d0d0'}}>
