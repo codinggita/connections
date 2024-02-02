@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Typography, Menu, MenuItem, Avatar } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom"
-import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
+
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
