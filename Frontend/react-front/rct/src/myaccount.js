@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Typography, Menu, MenuItem, Avatar } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom"
-import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
+import title from './chat/name.png'
+import logo from './chat/logo.png'
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -25,9 +24,10 @@ const Navbar = () => {
     }}>
       <AppBar position="static" sx={{ bgcolor: 'white' }}>
         <Toolbar>
+          <img src={logo} style={{height: 50}} alt='png'/>
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}>
-            <Link to="/home" style={{ textDecoration: 'none', color: 'black' }}>CONNECTIONS</Link>
+            <Link to="/home" style={{ textDecoration: 'none', color: 'black' }}><img src={title} style={{width:400, marginTop:7 }} alt='png'/></Link>
           </Typography>
           <IconButton
             aria-label="profile"
@@ -44,8 +44,8 @@ const Navbar = () => {
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
           >
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+            <MenuItem onClick={handleMenuClose}><Link to="/myprofile" style={{ textDecoration: 'none', color: 'black' ,'&:hover': {color:'#000000'}}}>My account</Link></MenuItem>
+            <MenuItem onClick={handleMenuClose}><Link to="/home" style={{ textDecoration: 'none', color: 'black' ,'&:hover': {color:'#000000'}}}>Logout</Link></MenuItem>
           </Menu>
 
         </Toolbar>
@@ -116,12 +116,13 @@ const Navbar = () => {
     </div>
 
 
-
+<div style={{height: '50vh', width: '50vh', backgroundColor: 'maroon', marginLeft: '5vh' }}></div>
+    </div>
         {/* Maroon div */}
-        <div style={{ height: '50vh', width: '50vh', backgroundColor: 'maroon', marginLeft: '5vh' }}></div>
+        
 
 </div>
-    </div>
+
   );
 };
 

@@ -11,6 +11,10 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import Footer from './footer';
 import Navbar from './navbar';
+import Date1 from './date/date1.png'
+import Date2 from './date/date2.png'
+import Date3 from './date/date3.png'
+import Date4 from './date/date4.png'
 
 
 function Date() {
@@ -23,7 +27,8 @@ function Date() {
         <Box sx={{ height: '100vh', padding: '0vh' }}>
           {/* Include the BasicCard component */}
           <Container maxWidth="sm" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-    <Card sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#f38383'}}>
+          <img src={Date1} alt='jpg' style={{ position: 'absolute', bottom:170, right: 900, height: '60vh' }} />
+    <Card sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#f38383',marginRight:10}}>
       <CardContent>
         <Typography sx={{textAlign: ' center', fontWeight: 'bold', fontSize: 45, color: '#060000'}}>
         Make the first move
@@ -37,6 +42,7 @@ function Date() {
       <Button sx={{ bgcolor: '#760000' , mx: 2, '&:hover': {bgcolor:'#3d0000'}}}><Link to="/signup" style={{ textDecoration: 'none',color: 'white' }}>Sign-In</Link></Button>
       </CardActions>
     </Card>
+    <img src={Date2} alt='jpg' style={{ position: 'absolute', top:355, right: 10, height: '60vh' }} />
     </Container>
         </Box>
       </Container>
@@ -47,7 +53,8 @@ function Date() {
         <Box sx={{ marginTop: '10vh'}}>
           {/* Include the BasicCard component */}
           <Container maxWidth="sm" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Card sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#6f1212'}}>
+          <img src={Date3} alt='jpg' style={{ position: 'absolute', top:855, right: 790, height: '95vh' }} />
+      <Card sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#6f1212',marginLeft:'155vh'}}>
         <CardContent>
           <Typography sx={{textAlign: ' left', fontWeight: 'bold', fontSize: 45, color: '#fff'}}>
           How it Starts
@@ -57,6 +64,7 @@ function Date() {
           </Typography>
         </CardContent>
       </Card>
+      <img src={Date2} alt='jpg' style={{ position: 'absolute', top:355, right: 10, height: '60vh' }} />
       </Container>
         </Box>
       </Container>
@@ -67,7 +75,8 @@ function Date() {
           {/* Include the BasicCard component */}
           <div idName='svg'></div>
           <Container maxWidth="sm" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Card sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#c16f6f'}}>
+          <img src={Date4} alt='jpg' style={{ top: '230.56vh',right:50, height: '100vh' }} />
+      <Card sx={{  position: 'absolute',minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#c16f6f',marginRight:130}}>
         <CardContent>
           <Typography sx={{textAlign: ' left', fontWeight: 'bold', fontSize: 45, color: '#fff'}}>
           The Connect Effect
@@ -78,6 +87,7 @@ function Date() {
           
         </CardContent>
       </Card>
+
       </Container>
         </Box>
       </Container>

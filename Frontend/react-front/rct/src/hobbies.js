@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom"
+import Hob1 from './signup/hob1.png'
+import Hob2 from './signup/hob2.png'
 
 export default function Hobbies() {
   return (
@@ -49,17 +51,10 @@ export default function Hobbies() {
           <Link to="/pic" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Next</Link>
           </Button>
         </div>
-
+        <img src={Hob1} alt='jpg' style={{ position:'absolute',top: '18.56vh',left:100, height: '80vh' }} />
+        <img src={Hob2} alt='jpg' style={{ position:'absolute',top: '18.56vh',right:40, height: '80vh' }} />
     </div>
     )
 }
 
 
-
-
-<TextField
-          id="outlined-multiline-flexible"
-          label="Multiline"
-          multiline
-          maxRows={4}
-        />
