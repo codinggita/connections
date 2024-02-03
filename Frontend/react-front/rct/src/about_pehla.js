@@ -8,8 +8,14 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Footer from './footer';
 import Navbar from './navbar';
+import Star from './about/star1.png'
+import About1 from './about/about1.png'
+import About2 from './about/about2.png'
+import About3 from './about/about3.png'
+import About4 from './about/about4.png'
+import About5 from './about/about5.png'
 
-
+//
 function Appa() {
   return (
     <div>
@@ -17,18 +23,14 @@ function Appa() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="xlg" className='bgcol'>
-      <div style={{position: 'absolute',
-    left: '70.53%',
-    right: '21.36%',
-    top: '4.7%',
-    bottom: '85.79%',
-    background: 'linear-gradient(180deg, rgba(255, 0, 0, 0.93) 0%, rgba(255, 118, 118, 0.865) 21.6%, rgba(255, 255, 255, 0.79) 48.1%, rgba(234, 130, 130, 0.79) 60%, rgba(216, 21, 21, 0.79) 74.1%, #D81515 88.6%)',
-}}>
-      {/* Your component content goes here */}
-    </div>
-        <Box sx={{ height: '100vh', padding: '0vh' }}>
-    <Container maxWidth="sm"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
 
+        <Box sx={{ height: '95vh', padding: '0vh' }}>
+    <Container maxWidth="sm"  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <img src={About1} alt='jpg' style={{ position: 'absolute', top:100, left: 80, height: '60vh' }} />
+    <img src={About2} alt='jpg' style={{ position: 'absolute', top: 320,right:10, height: '60vh' }} />
+    <img src={Star} alt='jpg' style={{ position: 'absolute', top:160, right: 418, height: '30vh' }} />
+    <img src={Star} alt='jpg' style={{ position: 'absolute', bottom:12, left:418, height: '30vh' }} />
+    
       <Card  sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#f08686'}}>
         <CardContent>
           <Typography sx={{textAlign: ' center', fontWeight: 'bold', fontSize: 45, color: '#060000'}}>
@@ -46,7 +48,8 @@ function Appa() {
         <Box sx={{ marginTop: '20vh'}}>
           {/* Include the BasicCard component */}
           <Container maxWidth="sm" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Card className='card2' sx={{ minHeight: 100, minWidth: 500 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#ffffff'}}>
+          <img src={About3} alt='jpg' style={{ position: 'absolute', top: 950,right:800, height: '80vh' }} />
+      <Card className='card2' sx={{ minHeight: 100, minWidth: 600 ,maxHeight: 400 , maxWidth: 1000  , bgcolor: '#ffffff',marginLeft:130}}>
         <CardContent>
           <Typography sx={{textAlign: ' left', fontWeight: 'bold', fontSize: 45, color: '#060000'}}>
             Why Connect Matters
@@ -66,7 +69,10 @@ function Appa() {
         <Box sx={{ marginTop: '20vh'}}>
           {/* Include the BasicCard component */}
           <Container maxWidth="sm" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Card className='card1' sx={{ minHeight: 100, minWidth: 500, maxHeight: 400, maxWidth: 1000, bgcolor: '#ffffff' }}>
+
+          <img src={About5} alt='jpg' style={{ position: 'absolute', top: '265.56vh',right:230, height: '80vh' }} />
+          <img src={About4} alt='jpg' style={{ position: 'absolute', top:'265.8vh',right:90, height: '80vh' }} />
+      <Card className='card1' sx={{ minHeight: 100, minWidth: 500, maxHeight: 400, maxWidth: 1000, bgcolor: '#ffffff' ,marginRight:130}}>
         <CardContent>
           <Typography sx={{ textAlign: 'left', fontWeight: 'bold', fontSize: 45, color: '#060000' }}>
             The Connect Effect

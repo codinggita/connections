@@ -5,6 +5,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { Link } from "react-router-dom"
+import title from './chat/name.png'
+import logo from './chat/logo.png'
 
 export default function Navbar3() {
   return (
@@ -18,9 +20,10 @@ export default function Navbar3() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
+             <img src={logo} style={{height: 50}}/>
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}>
-            <Link to="/home" style={{ textDecoration: 'none', color: 'black' }}>CONNECTIONS</Link>
+            <Link to="/home" style={{ textDecoration: 'none', color: 'black' }}><img src={title} style={{width:400, marginTop:7 }}/></Link>
           </Typography>
 
         </Toolbar>

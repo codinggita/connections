@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom"
+import Sign3 from './signup/sign3.png'
+import Sign4 from './signup/sign4.png'
 
 function SignUp1() {
     return (
@@ -41,7 +43,8 @@ function SignUp1() {
           <Link to="/hobbies" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Next</Link>
           </Button>
         </div>
-
+        <img src={Sign3} alt='jpg' style={{ position:'absolute',top: '18.56vh',left:150, height: '80vh' }} />
+        <img src={Sign4} alt='jpg' style={{ position:'absolute',top: '18.56vh',right:150, height: '80vh' }} />
     </div>
     )
 }

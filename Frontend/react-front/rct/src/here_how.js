@@ -2,39 +2,36 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Footer from './footer';
 import Navbar from './navbar';
-import boySVG from './boy_how.svg';
-import girlSVG from './girl_how.svg';
+import Boy from './how/how1.png'
+import Girl from './how/how2.png'
+import How3 from './how/how3.png'
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 
 function How() {
   return (
-    <div style={{background: 'linear-gradient(158deg, rgba(193,111,111,1) 13%, rgba(170,146,173,1) 36%, rgba(187,121,128,1) 66%, rgba(165,153,185,1) 83%, rgba(139,191,255,1) 100%)'}}>
+    <div style={{background: 'white'}}>
         <Navbar/>
-        <Typography sx={{marginTop:5, fontSize: 70 ,fontFamily: 'IM FELL Great Primer SC', marginLeft: 37}}>
-            Connect
+        <Typography sx={{marginTop:5, fontSize: 70 ,fontFamily: '-moz-initial', marginLeft: 37}}>
+            Connect<img src={How3}/>
         </Typography>
-        <Typography sx={{fontSize: 30 ,fontFamily: 'IM FELL Great Primer SC', marginLeft: 62}}>
+        <Typography sx={{fontSize: 30 ,fontFamily: '-moz-initial', marginLeft: 62}}>
         The Best Intro Lines to<br/> Use on Bumble — Because <br/>You’re Better Than ‘Hey’
         </Typography>
-        <div style={{display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'center',
-                    border: 'none',
-                    }}>
 
-        <img src={boySVG} alt="svg" />
-          <img src={girlSVG} alt="svg"/>
 
-        </div>
-
-        <p style={{marginLeft: 50, marginRight:50, marginTop:50, fontFamily: 'IM FELL Great Primer SC', fontSize: 20}}>
+        <p style={{marginLeft: 50, marginRight:50, marginTop:50,fontFamily: '-moz-initial', fontSize: 20}}>
         You know that slight flush and those positive vibrations you feel when the “You Matched!” screen appears when you’re Connecting? Whether you’ve been using Connections for a couple years or a couple of days, that sensation never really goes away. And while the match is the critical first step to possibly making a meaningful connection, it’s what comes next — your ice-breaking introduction line — that can make all the difference.
         </p>
+
+        <img src={Boy} style={{left: '150vh', marginLeft: '15vh', marginTop: 0}} />
+        <img src={Girl} alt='jpg' style={{  top: 320,right:120, height: '100vh' }} />
+
+
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 250, height: 80, borderRadius: '50px',backgroundColor: 'maroon', marginLeft: 50, marginTop: 50 }}>
           <p style={{ fontSize:40, color: 'white'}}>Empathetic</p>
         </div>
-        <div style={{ marginLeft: 150, marginRight:90,ffontFamily: 'IM FELL Great Primer SC',fontSize: 20}}>
+        <div style={{ marginLeft: 150, marginRight:90,fontFamily: '-moz-initial',fontSize: 20}}>
         <p style={{color: 'black'}}>Kindness comes naturally to you–not only do you consider other people’s feelings, but you prioritize them. To showcase this, try opening with a cute compliment, or asking a question that allows your match to open up.</p>
         <p style={{color: '#8a0101'}}>Love your taste in music. What’s the best concert you’ve ever been to?</p>
         <p style={{color: '#006c16'}}>Ooh super cool pics. Are you into photography?</p>
@@ -43,9 +40,9 @@ function How() {
 
 
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 250, height: 80,borderRadius: '50px', backgroundColor: 'maroon', marginLeft: 50 , marginTop: 50}}>
-          <p style={{ fontSize:40, color: 'white'}}>Confident</p>
+          <p style={{ fontSize:40, color: 'white',fontFamily: '-moz-initial'}}>Confident</p>
         </div>
-        <div style={{ marginLeft: 150, marginRight:90,fontFamily: 'IM FELL Great Primer SC',fontSize: 20}}>
+        <div style={{ marginLeft: 150, marginRight:90,fontFamily: '-moz-initial',fontSize: 20}}>
         <p style={{color: 'black'}}>Your success derives from asking for what you want and not wasting anyone’s time (we love a trailblazer). Stick to these roots by telling your match what it is about them that caught your eye.</p>
         <p style={{color: '#8a0101'}}>Your dog is so cute! Hopefully he’ll make an appearance on our first date? 😉</p>
         <p style={{color: '#006c16'}}>Lol your bio had me on the floor. Wanna link up sometime and tell each other dad jokes?</p>
@@ -54,7 +51,7 @@ function How() {
 
 
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 250, height: 80, borderRadius: '50px',backgroundColor: 'maroon', marginLeft: 50 , marginTop: 50}}>
-          <p style={{ fontSize:40, color: 'white'}}>Humorous</p>
+          <p style={{ fontSize:40, color: 'white',fontFamily: '-moz-initial'}}>Humorous</p>
         </div>
         <div style={{ marginLeft: 150, marginRight:90,fontFamily: 'IM FELL Great Primer SC',fontSize: 20}}>
         <p style={{color: 'black'}}>The best way to win someone’s heart? Make them laugh! Luckily, your wit just so happens to be your greatest strength. Put your best foot forward by keeping things light-hearted, and don’t be afraid to get corny!</p>
@@ -62,7 +59,7 @@ function How() {
         <p style={{color: '#006c16'}}>I know we’re all sick of being quarantined, but I’m trying to LOCKDOWN someone like you.</p>
         <p style={{color: '#7b006f'}}>Alright, I’m here. What are your two other wishes?</p>
         </div>
-        <p style={{ marginLeft: 150, marginRight:90,fontFamily: 'IM FELL Great Primer SC',fontSize: 20,color: 'black', marginTop: 80}}>Above all, remember that regardless of how carefully crafted your first message may be, some people still may not respond. Dating takes effort from both parties, and no matter how many tries it takes, you deserve the type of relationship you want!</p>
+        <p style={{ marginLeft: 150, marginRight:90,fontFamily: '-moz-initial',fontSize: 20,color: 'black', marginTop: 80}}>Above all, remember that regardless of how carefully crafted your first message may be, some people still may not respond. Dating takes effort from both parties, and no matter how many tries it takes, you deserve the type of relationship you want!</p>
         
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:50}}>

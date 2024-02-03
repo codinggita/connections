@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import {  Link } from "react-router-dom"
+import Login1 from './login/login1.png'
+
 
 
 function Login() {
@@ -11,12 +13,13 @@ function Login() {
     <div style={{
       height: '100vh', 
       width: '100vw', 
-      background: 'linear-gradient(to right, #ef7b7b,#bbdaff)'
+      background: 'linear-gradient(217deg, rgba(189,60,60,1) 0%, rgba(251,204,204,1) 100%)'
     }}>
         
       <Navbar2/>
+      
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center',marginTop: 75}}>
-      <form style={{ bgcolor:'black',background: 'linear-gradient(to right, #d0e5ff,#ffbbbb)',
+      <form style={{bgcolor:'black',background: 'linear-gradient(217deg, rgba(251,204,204,1) 0%, rgba(189,60,60,1) 100%)',
         borderRadius: '30px',
         boxShadow: '0 5px 15px rgba(0, 0, 0, 0.35)',
         position: 'relative',
@@ -51,8 +54,8 @@ function Login() {
         </div>
         </Box>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:10}}>
-          <Button color="inherit" sx={{ bgcolor: '#980000', color: 'white', fontWeight: 'bold', mx: 2 ,'&:hover': {bgcolor:'#006698'}}}>
-          <Link to="/login" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Submit</Link>
+          <Button color="inherit" sx={{ bgcolor: '#980000', color: 'white', fontWeight: 'bold', mx: 2 ,'&:hover': {bgcolor:'#bd1414'}}}>
+          <Link to="/myaccount" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Submit</Link>
           </Button>
         </div>
 
@@ -67,6 +70,7 @@ function Login() {
 
         </form>
     </div>
+    <img src={Login1} alt='jpg' style={{ position:'absolute',top: '10.56vh',left:40, height: '55vh' }} />
     </div>
     
   )

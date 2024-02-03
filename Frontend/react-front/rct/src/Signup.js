@@ -4,19 +4,20 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom"
-import SignUp1 from './signup_1';
+import Sign1 from './signup/sign1.png'
+import Sign2 from './signup/sign2.png'
 
 function SignUp() {
   return (
     <div style={{
       height: '100vh', 
       width: '100vw', 
-      background: 'linear-gradient(to right,#bbdaff, #ef7b7b)'
+      background: 'linear-gradient(217deg, rgba(251,204,204,1) 0%, rgba(189,60,60,1) 100%)'
     }}>
         
       <Navbar3/>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center',marginTop: 75}}>
-      <form style={{ bgcolor:'black',background: 'linear-gradient(to right,#ffbbbb,#d0e5ff)',
+      <form style={{ bgcolor:'black',background: 'linear-gradient(217deg, rgba(189,60,60,1) 0%, rgba(251,204,204,1) 100%)',
         borderRadius: '30px',
         boxShadow: '0 5px 15px rgba(0, 0, 0, 0.35)',
         position: 'relative',
@@ -57,7 +58,7 @@ function SignUp() {
         </div>
         </Box>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:5}}>
-          <Button color="inherit" sx={{ bgcolor: '#980000', color: 'white', fontWeight: 'bold', mx: 2 ,'&:hover': {bgcolor:'#006698'}}}>
+          <Button color="inherit" sx={{ bgcolor: '#980000', color: 'white', fontWeight: 'bold', mx: 2 ,'&:hover': {bgcolor:'#bd1414'}}}>
           <Link to= "/signup_1" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Submit</Link>
           </Button>
         </div>
@@ -72,6 +73,8 @@ function SignUp() {
         </form>
         </div>
 
+        <img src={Sign1} alt='jpg' style={{ position:'absolute',top: '5.56vh',left:5, height: '60vh' }} />
+        <img src={Sign2} alt='jpg' style={{ position:'absolute',bottom: '0.56vh',left:1175, height: '60vh' }} />
     </div>
     
   )
