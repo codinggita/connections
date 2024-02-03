@@ -2,7 +2,9 @@ import React from 'react';
 import { AppBar, Toolbar, Typography} from '@mui/material';
 import { Link } from "react-router-dom"
 import title from './chat/name.png'
-import logo from './chat/logo.png'   
+import logo from './chat/logo.png'
+
+ 
 
 export default function Profile(){
     return(
@@ -21,16 +23,19 @@ export default function Profile(){
                 </Typography>
                 </Toolbar>
                 </AppBar>
-                <div style={{ marginTop: '15vh', height: '70vh', width: '50vh', backgroundColor: 'maroon', marginLeft: '50vh' }}>
-  <p style={{ fontSize: '4vh', marginLeft: '55vh', fontFamily: '-moz-initial' }}>Name, Age</p>
-</div>
-<p style={{ fontSize: '2vh', marginLeft: 155, marginRight: 45, fontFamily: '-moz-initial' , padding:0}}>
+               
+  <p style={{top:'15vh',marginTop: '15vh',width: '50vh', fontSize: '4vh', marginLeft: '105vh', fontFamily: '-moz-initial',position:'absolute' }}>Name, Age</p>
+
+<p style={{ fontSize: '2vh',top:'40vh',left:'105vh',right:'55vh', fontFamily: '-moz-initial',position:'absolute'}}>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
+
                </div>
                 
     );
 };
+
+

@@ -24,8 +24,8 @@ function How() {
         You know that slight flush and those positive vibrations you feel when the “You Matched!” screen appears when you’re Connecting? Whether you’ve been using Connections for a couple years or a couple of days, that sensation never really goes away. And while the match is the critical first step to possibly making a meaningful connection, it’s what comes next — your ice-breaking introduction line — that can make all the difference.
         </p>
 
-        <img src={Boy} style={{top: '60vh', left: 750, textAlign: 'left', position: 'absolute', marginLeft: '15vh', marginTop: 0}} alt='png'/>
-        <img src={Girl} alt='jpg' style={{ right:120, height: '100vh' }} />
+        <img src={Boy} style={{top: '45vh', left: 50, textAlign: 'left', position: 'absolute', marginLeft: '15vh'}} alt='png'/>
+        <img src={Girl} alt='jpg' style={{ marginTop: '3vh', marginLeft: '105vh',  height: '100vh', marginRight:'15vh' }} />
 
 
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 250, height: 80, borderRadius: '50px',backgroundColor: 'maroon', marginLeft: 50, marginTop: 50 }}>

@@ -101,7 +101,7 @@ export default function SimpleContainer() {
               height: '339.79px',
               left: '58px',
               top: '75px',
-              borderRadius: '20px',}}/> 
+              borderRadius: '20px',}} alt='png'/> 
 
 
           {/*Student"*/ }
@@ -142,7 +142,7 @@ export default function SimpleContainer() {
             }}>
             Krishna Vamsi, 20
           </div>
-          <img src={pic6} style={{position: 'absolute',
+          <img alt='png' src={pic6} style={{position: 'absolute',
                       width: '139.06px',
                       height: '139.06px',
                       left: '10px',
@@ -184,7 +184,6 @@ export default function SimpleContainer() {
               height: '51px',
               left: '0px',
               top: '515px',
-              fontFamily: 'IM FELL Great Primer SC',
               fontStyle: 'normal',
               fontWeight: 400,
               fontSize: '14px',
@@ -246,7 +245,7 @@ export default function SimpleContainer() {
               borderRadius: '31px',
             }}
           ></div>
-                  <img src={pic5} style={{ position: 'absolute',
+                  <img alt='png' src={pic5} style={{ position: 'absolute',
               width: '232px',
               height: '339.79px',
               left: '58px',
@@ -271,7 +270,7 @@ export default function SimpleContainer() {
           >
             Anjali, 24
           </div>
-          <img src={pic7} style={{position: 'absolute',
+          <img alt='png' src={pic7} style={{position: 'absolute',
               width: '145.98px',
               height: '146.48px',
               left: '222.77px',
@@ -333,7 +332,6 @@ export default function SimpleContainer() {
               width: '340px',
               height: '68px',
               top: '515px',
-              fontFamily: 'IM FELL Great Primer SC',
               fontStyle: 'normal',
               fontWeight: 400,
               fontSize: '14px',
