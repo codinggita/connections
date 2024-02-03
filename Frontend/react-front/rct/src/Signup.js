@@ -59,7 +59,7 @@ function SignUp() {
         </Box>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:5}}>
           <Button color="inherit" sx={{ bgcolor: '#980000', color: 'white', fontWeight: 'bold', mx: 2 ,'&:hover': {bgcolor:'#bd1414'}}}>
-          <Link to= "/signup_1" style={{ textDecoration: 'none', color: 'white' ,'&:hover': {color:'#000000'}}}>Submit</Link>
+          <Link to= "/signup_1" style={{ textDecoration: 'none', color: 'white' }}>Submit</Link>
           </Button>
         </div>
         

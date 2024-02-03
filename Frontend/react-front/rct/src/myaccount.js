@@ -3,6 +3,9 @@ import { AppBar, Toolbar, IconButton, Typography, Menu, MenuItem, Avatar } from 
 import { Link } from "react-router-dom"
 import title from './chat/name.png'
 import logo from './chat/logo.png'
+import Acc1 from './account/acc1.png'
+import Acc2 from './account/acc2.png'
+import Acc3 from './account/acc3.png'
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -116,9 +119,12 @@ const Navbar = () => {
     </div>
 
 
-<div style={{height: '50vh', width: '50vh', backgroundColor: 'maroon', marginLeft: '5vh' }}></div>
-    </div>
-        {/* Maroon div */}
+<div style={{height: '60vh', width: '50vh', backgroundColor: 'maroon', marginLeft:'90vh' ,top: '20vh', left: 50,  position: 'absolute'}}></div>
+
+<img src={Acc1} alt='png' style={{top: '80vh', left: 660,  position: 'absolute',height: '20vh',}}/>
+<img src={Acc2} alt='png' style={{top: '84vh', left: 930,  position: 'absolute',height: '12vh',}}/>
+<img src={Acc3} alt='png' style={{top: '80vh', left: 720,  position: 'absolute',height: '20vh',}}/>
+</div>
         
 
 </div>
