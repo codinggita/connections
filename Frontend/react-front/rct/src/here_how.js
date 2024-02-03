@@ -13,7 +13,7 @@ function How() {
     <div style={{background: 'white'}}>
         <Navbar/>
         <Typography sx={{marginTop:5, fontSize: 70 ,fontFamily: '-moz-initial', marginLeft: 37}}>
-            Connect<img src={How3}/>
+            Connect<img src={How3} style={{height:'10vh'}} alt='png'/>
         </Typography>
         <Typography sx={{fontSize: 30 ,fontFamily: '-moz-initial', marginLeft: 62}}>
         The Best Intro Lines to<br/> Use on Bumble — Because <br/>You’re Better Than ‘Hey’
@@ -24,8 +24,8 @@ function How() {
         You know that slight flush and those positive vibrations you feel when the “You Matched!” screen appears when you’re Connecting? Whether you’ve been using Connections for a couple years or a couple of days, that sensation never really goes away. And while the match is the critical first step to possibly making a meaningful connection, it’s what comes next — your ice-breaking introduction line — that can make all the difference.
         </p>
 
-        <img src={Boy} style={{left: '150vh', marginLeft: '15vh', marginTop: 0}} />
-        <img src={Girl} alt='jpg' style={{  top: 320,right:120, height: '100vh' }} />
+        <img src={Boy} style={{top: '60vh', left: 750, textAlign: 'left', position: 'absolute', marginLeft: '15vh', marginTop: 0}} alt='png'/>
+        <img src={Girl} alt='jpg' style={{ right:120, height: '100vh' }} />
 
 
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 250, height: 80, borderRadius: '50px',backgroundColor: 'maroon', marginLeft: 50, marginTop: 50 }}>

@@ -44,31 +44,29 @@ function BFF() {
                 </Container>
 
 
-                <Container maxWidth="xlg" className='box-2' sx ={{width: '218.5vh', height:'180vh' }}>
-        <Box sx={{ marginTop: '10vh'}}>
-          {/* Include the BasicCard component */}
+                <Container maxWidth="xlg" className='box-2' sx={{ width: '218.5vh', height: '180vh' }}>
+  <Box sx={{ marginTop: '10vh' }}>
+    <Container maxWidth="sm" style={{ height: '100vh' }}>
+      <p style={{ fontFamily: '-moz-initial', fontSize: 50, fontWeight: 'bold',top: '120vh', right: 950, textAlign: 'left', position: 'absolute'}}>THERE ARE FRIENDS</p>
+      <p style={{ fontFamily: '-moz-initial', fontSize: 50, fontWeight: 'bold', top: '130vh', right: 1050, textAlign: 'left', position: 'absolute'}}>FOR EVERY ERA.</p>
+                    <img src={Bff9} alt='jpg' style={{ position: 'absolute', top:850, right: 3, height: '40vh' }} />
+                    <img src={Bff4} alt='jpg' style={{ position: 'absolute', top:1125, right: 190, height: '10vh' }} />
+                    <img src={Bff8} alt='jpg' style={{ position: 'absolute', top:1110, left: 210, height: '60vh' }} />
+                    <img src={Bff5} alt='jpg' style={{ position: 'absolute', top:1425, right: 470, height: '10vh' }} />
+                    <p style={{ fontWeight: 'bold', fontFamily: '-moz-initial', fontSize: 30, top: '260vh', right: 1150, textAlign: 'left', position: 'absolute' }}>Even your messy ones.</p>
+      <p style={{ fontFamily: '-moz-initial', fontSize: 20, textAlign: 'left' , top: '270vh', right:950,left:80, position: 'absolute'}}>Bumble For Friends is about exactly that, friends. Whether you moved to a new city, found a new hobby, or just want a new person to talk to—Bumble For Friends is about finding your kinda people.</p>
+                    <img src={Bff7} alt='jpg' style={{ position: 'absolute', top:'220vh', right: 70, height: '60vh' }} />
+                    <img src={Bff6} alt='jpg' style={{ position: 'absolute', top:'285vh', right: 250, height: '10vh' }} />
+                  </Container>
+                </Box>
+              </Container>
+
+
+
+      <Container maxWidth="xlg" sx ={{width: '218.5vh', height:'80vh', bgcolor:'#d57b7b' , marginTop:10}}>
           <Container maxWidth="sm" style={{height: '100vh' }}>
-            <p style={{fontFamily:'-moz-initial',fontSize:50, fontWeight:'bold'}}>THERE ARE FRIENDS</p>
-            <p style={{fontFamily:'-moz-initial',fontSize:50, fontWeight:'bold'}}>FOR EVERY ERA.</p>
-            <img src={Bff9} alt='jpg' style={{ position: 'absolute', top:850, right: 3, height: '40vh' }} />
-            <img src={Bff4} alt='jpg' style={{ position: 'absolute', top:1125, right: 190, height: '10vh' }} />
-            <img src={Bff8} alt='jpg' style={{ position: 'absolute', top:1110, left: 210, height: '60vh' }} />
-            <img src={Bff5} alt='jpg' style={{ position: 'absolute', top:1425, right: 470, height: '10vh' }} />
-            <p style={{fontWeight:'bold',fontFamily:'-moz-initial' ,fontSize:30,top:'285vh', right: 250,}}>Even your messy ones.</p>
-            <p style={{fontFamily:'-moz-initial' ,fontSize:20}}>Bumble For Friends is about exactly that, friends. Whether you moved to a new city, found a new hobby, or just want a new person to talk to—Bumble For Friends is about finding your kinda people.</p>
-
-            <img src={Bff7} alt='jpg' style={{ position: 'absolute', top:'220vh', right: 70, height: '60vh' }} />
-            <img src={Bff6} alt='jpg' style={{ position: 'absolute', top:'285vh', right: 250, height: '10vh' }} />
-                </Container>
-        </Box>
-      </Container>
-
-
-
-      <Container maxWidth="xlg" sx ={{width: '218.5vh', height:'80vh', bgcolor:'#d57b7b' }}>
-          <Container maxWidth="sm" style={{height: '100vh' }}>
-            <p style={{fontFamily:'-moz-initial',fontSize:40, fontWeight:'bold',textAlign:'left',width:800}}>Subscribe to Connect For Friends Emails</p>
-            <p style={{fontFamily:'-moz-initial',fontSize:30 , textAlign:'left'}}>We’d love to keep in touch to let you know about product updates, inspiring friendship tips & tricks, events, and special offers. Sign up if you’re happy to hear from us.</p>            
+            <p style={{fontFamily:'-moz-initial',fontSize:40, fontWeight:'bold',width:800,top: '315vh', left: 50, textAlign: 'left', position: 'absolute'}}>Subscribe to Connect For Friends Emails</p>
+            <p style={{fontFamily:'-moz-initial',fontSize:25 ,top: '330vh', left: 50,right:800, textAlign: 'left', position: 'absolute'}}>We’d love to keep in touch to let you know about product updates, inspiring friendship tips & tricks, events, and special offers. Sign up if you’re happy to hear from us.</p>            
           
           <Box
       component="form"
@@ -78,7 +76,7 @@ function BFF() {
       noValidate
       autoComplete="off"
     >
-      <div>
+      <div style={{top: '330vh', left: 1050, textAlign: 'left', position: 'absolute'}}>
         <TextField
           required
           id="Gmail-ID"
