@@ -48,7 +48,7 @@ const Navbar = () => {
             onClose={handleMenuClose}
           >
             <MenuItem onClick={handleMenuClose}><Link to="/myprofile" style={{ textDecoration: 'none', color: 'black' ,'&:hover': {color:'#000000'}}}>My account</Link></MenuItem>
-            <MenuItem onClick={handleMenuClose}><Link to="/home" style={{ textDecoration: 'none', color: 'black' ,'&:hover': {color:'#000000'}}}>Logout</Link></MenuItem>
+            <MenuItem onClick={handleMenuClose}><Link to="/login" style={{ textDecoration: 'none', color: 'black' ,'&:hover': {color:'#000000'}}}>Logout</Link></MenuItem>
           </Menu>
 
         </Toolbar>
@@ -64,8 +64,8 @@ const Navbar = () => {
             sx={{ bgcolor: '#d36f6f', height: '8vh', width: '8vh', fontSize: '5vh' }}
           />
           <div style={{ marginLeft: '1vh' }}>
-            <p style={{ marginTop: '1vh', fontSize: '24px' }}>Name, Age</p>
-            <p style={{ fontSize: '15px' }}>Occupation</p>
+            <p style={{ marginTop: '1vh', fontSize: '24px' }}>myName, myAge</p>
+            <p style={{ fontSize: '15px' }}>myOccupation</p>
           </div>
         </div>
 
@@ -73,7 +73,7 @@ const Navbar = () => {
 
         <div style={{ display: 'flex', alignItems: 'flex-start', marginLeft: '5vh', marginTop: '3vh' ,fontFamily:'-moz-initial'}}>
       <Avatar
-        alt="Profile Picture"
+        alt="Ram Profile Picture"
         src="/path/to/profile-picture.jpg"
         sx={{background:'linear-gradient(162deg, rgba(150,66,66,1) 0%, rgba(255,255,255,0) 100%)', height: '6vh', width: '6vh', fontSize: '4vh' }}
       />
@@ -86,18 +86,18 @@ const Navbar = () => {
 
     <div style={{ display: 'flex', alignItems: 'flex-start', marginLeft: '5vh', marginTop: '1vh' ,fontFamily:'-moz-initial'}}>
       <Avatar
-        alt="Profile Picture"
+        alt="Sita Profile Picture"
         src="/path/to/profile-picture.jpg"
         sx={{background:'linear-gradient(162deg, rgba(62,108,199,1) 0%, rgba(255,255,255,0) 100%)', height: '6vh', width: '6vh', fontSize: '4vh' }}
       />
       <div style={{ marginLeft: '1vh' }}>
         <p style={{ marginTop: '1vh', fontSize: '24px' }}>Username</p>
-        <p style={{ fontSize: '15px' }}>Has  sent a match request</p>
+        <Link to="/match" style={{ fontSize:'15px',textDecoration: 'none', color: 'black' ,fontFamily:'-moz-initial'}}>Has sent a Match Request</Link>
       </div>
     </div>
     <div style={{ display: 'flex', alignItems: 'flex-start', marginLeft: '5vh', marginTop: '1vh' ,fontFamily:'-moz-initial'}}>
       <Avatar
-        alt="Profile Picture"
+        alt="Veer Profile Picture"
         src="/path/to/profile-picture.jpg"
         sx={{ background:'linear-gradient(162deg, rgba(46,76,48,1) 0%, rgba(255,255,255,0) 100%)', height: '6vh', width: '6vh', fontSize: '4vh' }}
       />
@@ -108,7 +108,7 @@ const Navbar = () => {
     </div>
     <div style={{ display: 'flex', alignItems: 'flex-start', marginLeft: '5vh', marginTop: '1vh' ,fontFamily:'-moz-initial'}}>
       <Avatar
-        alt="Profile Picture"
+        alt="Priya Profile Picture"
         src="/path/to/profile-picture.jpg"
         sx={{ background:'linear-gradient(162deg, rgba(254,214,0,1) 0%, rgba(255,255,255,0) 100%)', height: '6vh', width: '6vh', fontSize: '4vh' }}
       />

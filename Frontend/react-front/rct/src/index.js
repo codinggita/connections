@@ -14,6 +14,9 @@ import BFF from './bff'
 import Success from './subscription';
 import Profile from './myprofile'
 import Account from './myaccount';
+import Del from './delacc';
+import Request from './match_req';
+import Chat from './chat';
 import reportWebVitals from './reportWebVitals';
 import{BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -28,12 +31,15 @@ root.render(
         <Route path = "/login" element={<Login/>}/>
         <Route path = "/signup" element={<SignUp/>}/>
         <Route path = "/how" element={<How/>}/>
+        <Route path = "/myaccount" element={<Account/>}/>
+        <Route path = "/myprofile" element={<Profile/>}/>
         <Route path = "/signup_1" element={<SignUp1/>}/>
         <Route path = "/hobbies" element={<Hobbies/>}/>
         <Route path = "/pic" element={<Pic/>}/>
         <Route path = "/bff" element={<BFF/>}/>
-        <Route path = "/myaccount" element={<Account/>}/>
-        <Route path = "/myprofile" element={<Profile/>}/>
+        <Route path = "/del" element={<Del/>}/>
+        <Route path = "/match" element={<Request/>}/>
+        <Route path = "/chat" element={<Chat/>}/>
         <Route path = "/subscription" element={<Success/>}/>
         <Route path = "/*" element={<p>No Route Found Here</p>}/>
 
