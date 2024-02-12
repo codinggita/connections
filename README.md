@@ -12,5 +12,6 @@
 
       API Documentation : https://documenter.getpostman.com/view/32409675/2s9YymFPsN
 
-
- - Frontend Deployed: https://connecttions.netlify.app/
+    - Frontend Deployed: https://connecttions.netlify.app/
+  
+    - Figma Design: https://www.figma.com/file/UJ7aox1pBxskxuYQWELxn3/Untitled?type=design&node-id=0%3A1&mode=design&t=XDshuc0VNFS6uZGL-1
