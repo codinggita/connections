@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import Navbar3 from './Navbar3'
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import './chat.css'
-import Quiz from './quiz/Components/Quiz/quiz'
-
 
 const Chat = () => {
   const [socket, setSocket] = useState(null);
@@ -31,14 +27,7 @@ const Chat = () => {
     }
   }, [socket]);
 
-  const handleNameInput = () => {
-    const enteredName = prompt('Please enter your name:');
-    if (enteredName) {
-      setName(enteredName);
-    } else {
-      handleNameInput(); // Prompt again if the user cancels
-    }
-  };
+
 
   const sendMessage = () => {
     if (message.trim() !== '') {

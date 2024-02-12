@@ -442,6 +442,7 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const path = require ('path')
 const app = express();
+const cloudinary = require('cloudinary').v2;
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
@@ -452,7 +453,12 @@ app.listen(PORT, () => {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-
+  //Configure Cloudinary with your API Key, API Secret, and Cloud Name
+  cloudinary.config({
+    cloud_name: 'your_cloud_name',
+    api_key: 'your_api_key',
+    api_secret: 'your_api_secret',
+  });
 
 
 const userSchema = new mongoose.Schema({
