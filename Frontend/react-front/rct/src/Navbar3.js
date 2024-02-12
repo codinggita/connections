@@ -23,7 +23,7 @@ export default function Navbar3() {
              <img src={logo} style={{height: 50}} alt='png'/>
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}>
-            <Link to="/home" style={{ textDecoration: 'none', color: 'black' }}><img src={title} style={{width:400, marginTop:7 }} alt='png'/></Link>
+            <Link to="/myaccount" style={{ textDecoration: 'none', color: 'black' }}><img src={title} style={{width:400, marginTop:7 }} alt='png'/></Link>
           </Typography>
 
         </Toolbar>

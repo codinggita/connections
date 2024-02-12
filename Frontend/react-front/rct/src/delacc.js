@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 export default function Del(){
     return(
-        <div>
+      <div style={{ background: 'linear-gradient(267deg, rgba(255,181,181,1) 0%, rgba(120,31,31,1) 25%, rgba(255,181,181,1) 50%, rgba(120,31,31,1) 75%, rgba(255,181,181,1) 100%)', minHeight: '100vh' }}>
             <Navbar/>
 
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop:'20vh'}}>
@@ -36,3 +36,4 @@ export default function Del(){
         </div>
     )
 }
+
