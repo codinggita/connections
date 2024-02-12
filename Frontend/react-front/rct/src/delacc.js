@@ -1,7 +1,4 @@
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Navbar from './Navbar3';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -12,11 +9,11 @@ import { Link } from 'react-router-dom';
 
 export default function Del(){
     return(
-        <div>
+      <div style={{ background: 'linear-gradient(267deg, rgba(255,181,181,1) 0%, rgba(120,31,31,1) 25%, rgba(255,181,181,1) 50%, rgba(120,31,31,1) 75%, rgba(255,181,181,1) 100%)', minHeight: '100vh' }}>
             <Navbar/>
 
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop:'20vh'}}>
-            <Card sx={{minHeight: 250, minWidth: 500, maxHeight: 400, maxWidth: 1000, bgcolor: '#ff1313', marginBottom: 2,marginRight:5,border:'2px' ,border: '2px solid red',boxShadow: '0 5px 15px rgba(0, 0, 0, 3)'}}>
+            <Card sx={{minHeight: 250, minWidth: 500, maxHeight: 400, maxWidth: 1000, bgcolor: '#ff1313', marginBottom: 2,marginRight:5,border: '2px solid red',boxShadow: '0 5px 15px rgba(0, 0, 0, 3)'}}>
         <CardContent>
           <Typography sx={{ textAlign: 'center', fontWeight: 'semi-bold', fontSize: 45, color: '#ffabab',fontFamily:'-moz-initial' }}>
            Your Account has been
@@ -36,3 +33,4 @@ export default function Del(){
         </div>
     )
 }
+

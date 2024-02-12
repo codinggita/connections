@@ -34,14 +34,14 @@ export default function SimpleContainer() {
       <Navbar />
     <React.Fragment>
       <CssBaseline />
-      <Container className='gradient_background' sx={{ minWidth: 1519 }}>
-  <Box sx={{ height: '100vh', padding: '0vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Container className='gradient_background' sx={{ minWidth: '1519px' }}>
+  <Box sx={{height: '100vh', padding: '0vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <Container maxWidth="sm" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <img src={pic2} alt='jpg' style={{ position: 'absolute', bottom:30, right: 580, height: '60vh' }} />
-      <img src={pic3} alt='jpg' style={{ position: 'absolute', bottom:265, left: 460, height: '15vh' }} />
-      <Card sx={{ minHeight: 250, minWidth: 500, maxHeight: 400, maxWidth: 1000, bgcolor: '#f4d0d0', marginBottom: 2,marginRight:5 }}>
+      <img src={pic2} alt='jpg' style={{ position: 'absolute', bottom:'3vh', right: '85vh', height: '60vh' }} />
+      <img src={pic3} alt='jpg' style={{ position: 'absolute', bottom: '32.5vh', left: '66vh', height: '15vh' }} />
+      <Card sx={{ minHeight: '25vh', minWidth: 500, maxHeight: '40vh', maxWidth: '100vh', bgcolor: '#f4d0d0', marginBottom: 2,marginRight:5 }}>
         <CardContent>
-          <Typography sx={{ textAlign: 'center', fontWeight: 'bold', fontSize: 45, color: '#060000',fontFamily:'-moz-initial' }}>
+          <Typography sx={{ textAlign: 'center', fontWeight: 'bold', fontSize: '45px', color: '#060000',fontFamily:'-moz-initial' }}>
             Make the first move
           </Typography>
           <Typography sx={{ textAlign: 'center', fontWeight: 'semi-bold', fontSize: 30, color: '#060000' ,fontFamily:'-moz-initial'}}>
@@ -54,7 +54,7 @@ export default function SimpleContainer() {
           </Button>
         </CardActions>
       </Card>
-      <img src={pic} alt='jpg' style={{ position: 'absolute', top: 43, left: 480, height: '63vh' }} />
+      <img src={pic} alt='jpg' style={{ position: 'absolute', top: 23, left: 480, height: '63vh' }} />
     </Container>
   </Box>
 </Container>

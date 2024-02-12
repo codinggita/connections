@@ -26,7 +26,7 @@ export default function Profile(){
                 </Toolbar>
                 </AppBar>
                
-  <p style={{top:'15vh',marginTop: '15vh',width: '50vh', fontSize: '4vh', marginLeft: '105vh', fontFamily: '-moz-initial',position:'absolute' }}>myName, myAge</p>
+  <p style={{top:'15vh',marginTop: '15vh',width: '50vh', fontSize: '4vh', marginLeft: '105vh', fontFamily: '-moz-initial',position:'absolute' }}>myName</p>
 
 <p style={{ fontSize: '2vh',top:'40vh',left:'105vh',right:'55vh', fontFamily: '-moz-initial',position:'absolute'}}>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -40,7 +40,7 @@ export default function Profile(){
   <Link to="/login" style={{ textDecoration: 'none', color: 'black' ,fontFamily:'-moz-initial'}}>Logout</Link>
 </Button>
 <Button color="inherit" sx={{width:'15vh',background: 'linear-gradient(217deg, rgba(242,0,0,1) 0%, rgba(245,75,75,1) 17%, rgba(242,0,0,1) 34%,rgba(245,75,75,1) 50%, rgba(242,0,0,1) 67%, rgba(245,75,75,1) 84%, rgba(242,0,0,1) 100%)', color: 'white', fontWeight: 'bold', mx: 2, borderRadius:'10px',height:50 }}>
-  <Link to="/del" style={{ textDecoration: 'none', color: 'black' ,fontFamily:'-moz-initial'}}>Delete</Link>
+  <Link to="/sure" style={{ textDecoration: 'none', color: 'black' ,fontFamily:'-moz-initial'}}>Delete</Link>
 </Button>
 </div>
 
@@ -48,5 +48,3 @@ export default function Profile(){
                 
     );
 };
-
-

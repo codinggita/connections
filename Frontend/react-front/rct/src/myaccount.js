@@ -7,6 +7,7 @@ import Acc1 from './account/acc1.png'
 import Acc2 from './account/acc2.png'
 import Acc3 from './account/acc3.png'
 
+
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -19,6 +20,7 @@ const Navbar = () => {
   };
 
   return (
+    
     <div style={{
       display: 'flex',
       flexDirection: 'column',
@@ -30,7 +32,7 @@ const Navbar = () => {
           <img src={logo} style={{height: 50}} alt='png'/>
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}>
-            <Link to="/home" style={{ textDecoration: 'none', color: 'black' }}><img src={title} style={{width:400, marginTop:7 }} alt='png'/></Link>
+            <Link to="/myaccount" style={{ textDecoration: 'none', color: 'black' }}><img src={title} style={{width:400, marginTop:7 }} alt='png'/></Link>
           </Typography>
           <IconButton
             aria-label="profile"
@@ -64,7 +66,7 @@ const Navbar = () => {
             sx={{ bgcolor: '#d36f6f', height: '8vh', width: '8vh', fontSize: '5vh' }}
           />
           <div style={{ marginLeft: '1vh' }}>
-            <p style={{ marginTop: '1vh', fontSize: '24px' }}>myName, myAge</p>
+            <p style={{ marginTop: '1vh', fontSize: '24px' }}>myName</p>
             <p style={{ fontSize: '15px' }}>myOccupation</p>
           </div>
         </div>
@@ -103,7 +105,7 @@ const Navbar = () => {
       />
       <div style={{ marginLeft: '1vh' }}>
         <p style={{ marginTop: '1vh', fontSize: '24px' }}>Username</p>
-        <p style={{ fontSize: '15px' }}>Click to chat</p>
+        <Link to="/quiz" style={{ fontSize:'15px',textDecoration: 'none', color: 'black' ,fontFamily:'-moz-initial'}}>Click to play Quiz</Link>
       </div>
     </div>
     <div style={{ display: 'flex', alignItems: 'flex-start', marginLeft: '5vh', marginTop: '1vh' ,fontFamily:'-moz-initial'}}>
@@ -114,7 +116,7 @@ const Navbar = () => {
       />
       <div style={{ marginLeft: '1vh' }}>
         <p style={{ marginTop: '1vh', fontSize: '24px' }}>Username</p>
-        <p style={{ fontSize: '15px' }}>Click to Chat</p>
+        <Link to="/chat" style={{ fontSize:'15px',textDecoration: 'none', color: 'black' ,fontFamily:'-moz-initial'}}>Click to Chat</Link>
       </div>
     </div>
 

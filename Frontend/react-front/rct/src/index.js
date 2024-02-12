@@ -15,10 +15,16 @@ import Success from './subscription';
 import Profile from './myprofile'
 import Account from './myaccount';
 import Del from './delacc';
+import Sure from './sure';
 import Request from './match_req';
 import Chat from './chat';
+import Upma from './App';
+//import Text from './server';
 import reportWebVitals from './reportWebVitals';
 import{BrowserRouter, Routes, Route } from "react-router-dom";
+
+//        <Route path = "/chat" element={<Chat/>}/>
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -37,8 +43,10 @@ root.render(
         <Route path = "/hobbies" element={<Hobbies/>}/>
         <Route path = "/pic" element={<Pic/>}/>
         <Route path = "/bff" element={<BFF/>}/>
-        <Route path = "/del" element={<Del/>}/>
+        <Route path = "/deluser" element={<Del/>}/>
+        <Route path = "/sure" element={<Sure/>}/>
         <Route path = "/match" element={<Request/>}/>
+        <Route path = "/quiz" element={<Upma/>}/>
         <Route path = "/chat" element={<Chat/>}/>
         <Route path = "/subscription" element={<Success/>}/>
         <Route path = "/*" element={<p>No Route Found Here</p>}/>
