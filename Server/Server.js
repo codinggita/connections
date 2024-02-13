@@ -1,448 +1,11 @@
-// //*********************************************************************************************
-
-// const express = require('express');
-// const mongoose = require('mongoose');
-// const cors = require('cors');
-// const bodyParser = require('body-parser');
-// const bcrypt = require('bcrypt');
-// const path = require ('path')
-
-// const app = express();
-// const PORT = process.env.PORT || 8000;
-
-// app.listen(PORT, () => {
-//     console.log(`Server is running on http://localhost:${PORT}`);
-//   });
-
-//   app.use(cors());
-//   app.use(bodyParser.json());
-//   mongoose.connect('mongodb://localhost:5000/idk', {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   });
-
-
-// // //***********************************List of Possible Routes*********************************
-
-// //Route for Home Page
-// app.get('/home', (req, res) => {
-//   res.send('This is home.');
-// });
-// app.get('/', (req, res) => {
-//   res.send('This is home.');
-// });
-
-// //Route for About Page
-// app.get('/about', (req, res) => {
-//   res.send('This is the abouts page');
-// });
-
-// // Connect BFF
-// app.get('/bff', (req, res) => {
-//   res.send('This is Connect BFF.');
-// });
-
-// // Connect Date
-// app.get('/date', (req, res) => {
-//   res.send('This is CONNECT DATE.');
-// });
-
-// //Route for Here's How page
-// app.get('/hOW', (req, res) => {
-//   res.send("HERE'S HOW");
-// });
-
-// //My profile
-// app.get('/myprofile', (req, res) => {
-//   res.send('This is your profile.');
-// });
-
-
-// /**********************************************************************************************************/
-// // //Route for SignUp Page
-
-// // Handle other routes by serving the React app
-// app.get('/signup', (req, res) => {
-//   res.send('This is SignUp page.');
-// });
-
-//   //Route for Login Page
-//   app.get('/login', (req, res) => {
-//     res.send('This is the Login page.');
-//   });
-
-// // POST REQUEST -> SIGNUP
-// const userSchema = new mongoose.Schema({
-//   email: { type: String, unique: true, required: true },
-//   password: { type: String, required: true }
-// });
-
-// const User = mongoose.model('User', userSchema, 'users');
-
-// // Endpoint for handling POST requests
-// app.post('/signup', async (req, res) => {
-//   const { email, password, confirmPassword } = req.body;
-
-//   // Check if passwords match
-//   if (password !== confirmPassword) {
-//     return res.status(400).json({ error: 'Passwords do not match' });
-//   }
-
-//   try {
-//     // Check if email is unique
-//     const existingUser = await User.findOne({ email });
-//     if (existingUser) {
-//       return res.status(400).json({ error: 'Email is already registered' });
-//     }
-
-//     // Hash the password before saving
-//     const hashedPassword = await bcrypt.hash(password, 10);
-
-//     // Create a new user with the hashed password
-//     const newUser = new User({ email, password: hashedPassword });
-//     await newUser.save();
-
-//     // Respond with a success message or user data
-//     res.status(201).json({ message: 'User created successfully' });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
-
-// //POST REQUEST-> LOGIN
-//   app.post('/login', async (req, res) => {
-//     const { email, password } = req.body;
-//     try {
-//       // Check if the email exists in the database
-//       const user = await User.findOne({ email });
-//       if (!user) {
-//         return res.status(404).json({ error: 'Email not found' });
-//       }
-//       // Check if the provided password matches the hashed password in the database
-//       const passwordMatch = await bcrypt.compare(password, user.password);
-//       if (!passwordMatch) {
-//         return res.status(401).json({ error: 'Incorrect password' });
-//       }
-//       // Login successful
-//       res.status(200).json({ message: 'Login successful' });
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ error: 'Internal Server Error' });
-//     }
-//   });
-
-// //DELETE REQUEST-> DELETE USER
-//   app.delete('/users/:email', async (req, res) => {
-//     const { email } = req.params;
-//     try {
-//       // Find the user by email and delete it
-//       const deletedUser = await User.findOneAndDelete({ email });
-//       if (!deletedUser) {
-//         return res.status(404).json({ error: 'User not found' });
-//       }
-//       res.status(200).json({ message: 'User deleted successfully' });
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ error: 'Internal Server Error' });
-//     }
-//   });
-
-
-//   //PATCH REQUEST -> UPDATE PASSWORD
-//   app.patch('/users/:email', async (req, res) => {
-//     const { email } = req.params;
-//     const { newPassword } = req.body;
-//     try {
-//       // Find the user by email
-//       const user = await User.findOne({ email });
-//       if (!user) {
-//         return res.status(404).json({ error: 'User not found' });
-//       }
-//       // Hash the new password
-//       const hashedPassword = await bcrypt.hash(newPassword, 10);
-//       // Update the user's password
-//       user.password = hashedPassword;
-//       await user.save();
-//       res.status(200).json({ message: 'Password updated successfully' });
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ error: 'Internal Server Error' });
-//     }
-//   });
-
-
-//   //get user details
-//   app.get('/get-users', async (req, res) => {
-//     try {
-//       const users = await User.find();
-//       res.status(200).json(users);
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ error: 'Internal Server Error' });
-//     }
-//   });
-
-// /**********************************************************************************************************/
-// app.get('/signup_1', (req, res) => {
-//   res.send('This is SignUp-2 page.');
-// });
-
-// //Signup_1
-// const nameSchema = new mongoose.Schema({
-//     firstName: { type: String, required: true },
-//     lastName: { type: String, required: true },
-//   });
-//   // Use 'Name' as the model name, and 'nameSchema' as the schema
-//   // Use 'Name' as the model name, and 'nameSchema' as the schema
-// const Name = mongoose.model('Name', nameSchema, 'names');
-
-// // Assuming you have an 'app' instance defined somewhere
-// app.post('/signup_1', async (req, res) => {
-//   const { firstName, lastName } = req.body;
-//   console.log(req.body)
-//   try {
-//     const newName = new Name({ firstName, lastName }); // Use the 'Name' model
-//     await newName.save();
-//     res.status(201).json({ message: 'Name saved successfully' });
-//   } catch (error) {
-//     console.log(error);
-//     res.send(error);
-//   }
-// });
-//   // get user details
-//   app.get('/get-name', async (req, res) => {
-//     try {
-//       const names = await Name.find();
-//       res.status(200).json(names);
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ error: 'Internal Server Error' });
-//     }
-//   });
-  
-
-// /**********************************************************************************************************/
-// //Hobbies
-// app.get('/hobbies', (req, res) => {
-//   res.send('This is SignUp-3 page.');
-// });
-
-// //Hobbies
-// const HobSchema = new mongoose.Schema({
-//     interests: { type: String, required: true },
-//     info_on_u: { type: String, required: true },
-//   });
-//   // Define the Hobby model
-//   const Hobby = mongoose.model('Hobby', HobSchema,'hobbies');
-//   app.post('/hobbies', async (req, res) => {
-//     const { interests, info_on_u } = req.body;
-//     try {
-//       // Create a new hobby with the provided data
-//       const newHobby = new Hobby({ interests, info_on_u });
-//       await newHobby.save();
-//       res.status(201).json({ message: 'Hobbies saved successfully' });
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ error: 'Internal Server Error' });
-//     }
-//   });
-//   // get user details
-//   app.get('/get-hobbies', async (req, res) => {
-//     try {
-//       const names = await Hobby.find();
-//       res.status(200).json(names);
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ error: 'Internal Server Error' });
-//     }
-//   });
-
-
-// /**********************************************************************************************************/
-
-
-
-
-// // Pictures uploading page
-// app.get('/my_pictures', (req, res) => {
-//   res.send('This is SignUp page.');
-// });
-
-// var sender;
-// let pic = {ture:[
-// sender
-// ]};
-
-// //proof of working
-// /*app.get("/pic", (req, res) => {
-// res.send(pic.ture);
-// });*/
-
-// // Route to upload pictures
-// app.post('/pic', (req, res) => {
-// pic.ture.push(req.body);
-// res.send("Picture uploaded successfully.");
-// });
-
-
-// /**********************************************************************************************************/
-
-
-
-
-// //My Account
-// app.get('/myprofile', (req, res) => {
-//   res.send('This is your profile.');
-// });
-
-// // Sending a match request
-// var sender;
-// let match = {req:[
-//   sender
-// ]};
-// /*proof of working
-// app.get("/match", (req, res) => {
-//   res.send(match.req);
-// });*/
-// app.post('/match', (req, res) => {
-//   match.req.push(req.body);
-//   res.send("Match request sent successfully.");
-// });
-
-
-// //Accessing other profiles
-// app.get('/profilebrowsing', (req, res) => {
-//   res.send('This is the profile browsing section!');
-// });
-
-// // Route for accessing one person's profile
-// app.get("/profile/:id", (req, res) => {
-//   res.send(`This is ${req.params.id}'s Profile`);
-// });
-
-// // ***********************************Chat
-// var sender;
-// var recipient;
-// let chat = {new:[
-//   sender,
-//   recipient,
-// ]};
-
-// //proof of working
-// app.get("/chat", (req, res) => {
-//   res.send(chat.new);
-// });
-
-// // Route to chat/text
-// app.post('/chat', (req, res) => {
-//   chat.new.push(req.body);
-//   res.send("Chat initiated successfully.");
-// });
-
-// //Quiz
-// var sender;
-// var recipient;
-// var ques;
-// let quiz = {text:[
-//   sender,
-//   recipient,
-//   ques
-// ]};
-
-// //proof of working
-// /*app.get("/quiz", (req, res) => {
-//   res.send(quiz.text);
-// });*/
-
-// // Route to chat/text
-// app.post('/quiz', (req, res) => {
-//   quiz.text.push(req.body);
-//   res.send("Quiz question sent successfully.");
-// });
-
-
-// // put request to edit info of mine
-// const authenticateuser = (req, res, next) => {
-//   next();
-// };
-
-// app.put('/myProfile/:id', authenticateuser, async (req, res) => {
-//   const userId = req.params.id;
-//   const { username, password, otherInfo } = req.body;
-//   // Find the user by ID
-//   const user = users.find(user => user.id === userId);
-//   // Update the username if provided
-//   if (username) {
-//     // Check if the new username already exists
-//     if (users.some(u => u.username === username && u.id !== userId)) {
-//       return res.status(400).json({ error: 'Username already exists' });
-//     }
-//     user.username = username;
-//   }
-//   // Update the password if provided
-//   if (password) {
-//     // Hash the new password
-//     const hashedPassword = await bcrypt.hash(password, 10);
-//     user.password = hashedPassword;
-//   }
-//   // Update other information if provided
-//   if (otherInfo) {
-//     user.otherInfo = otherInfo;
-//   }
-//   res.json({ message: 'User information updated successfully', user });
-// });
-
-
-// /**********************************************************************************************************/
-
-// //Deleting profile
-// const authenticateUser = (req, res, next) => {
-//   // Implement your authentication logic here, for example, using JWTs or session tokens
-//   // For simplicity, this example assumes a user is always authenticated
-//   next();
-// };
-// app.delete('/user/:id', authenticateUser, (req, res) => {
-//   const userId = req.params.id;
-//   // Find the user index by ID
-//   const userIndex = users.findIndex(user => user.id === userId);
-//   // Remove the user from the array
-//   users.splice(userIndex, 1);
-//   res.json({ message: 'User account deleted successfully' });
-// });
-
-// //Logout
-// app.get("/myProfile", (req, res) => {
-//   res.send('Logged out');
-// });
-// // ***********************************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const multer = require('multer');
+//const multer = require('multer');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const path = require ('path')
 const app = express();
-const cloudinary = require('cloudinary').v2;
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
@@ -453,19 +16,118 @@ app.listen(PORT, () => {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-  //Configure Cloudinary with your API Key, API Secret, and Cloud Name
-  cloudinary.config({
-    cloud_name: 'your_cloud_name',
-    api_key: 'your_api_key',
-    api_secret: 'your_api_secret',
-  });
+  const db = mongoose.connection;
+  db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+});
+/**********************************************************************************************************/
 
+//GET REQUEST -> HOME
+app.get('/home', (req, res) => {
+  res.send('This is home.');
+});
+app.get('/', (req, res) => {
+  res.send('This is HOME.');
+});
 
+//GET REQUEST -> ABOUT
+app.get('/about', (req, res) => {
+  res.send('This is the abouts page');
+});
+
+//GET REQUEST -> CONNECT BFF
+app.get('/bff', (req, res) => {
+  res.send('This is Connect BFF.');
+});
+
+//GET REQUEST -> SUCCESSFUL SUBSCRIPTION
+app.get('/subscription', (req, res) => {
+  res.send('You will be able to view this page when you subscribe to CONNECT BFF.');
+});
+
+//GET REQUEST -> CONNECT DATE
+app.get('/date', (req, res) => {
+  res.send('This is CONNECT DATE.');
+});
+
+//GET REQUEST -> HERE'S HOW
+app.get('/how', (req, res) => {
+  res.send("HERE'S HOW");
+});
+
+//GET REQUEST -> MY ACCOUNT
+app.get('/myaccount', (req, res) => {
+  res.send('This is your account.');
+});
+
+//GET REQUEST -> MY PROFILE
+app.get('/myprofile', (req, res) => {
+  res.send('This is your profile.');
+});
+
+//GET REQUEST -> LOGIN
+app.get('/login', (req, res) => {
+  res.send('This is login page.');
+});
+
+//GET REQUEST -> SIGNUP
+app.get('/signup', (req, res) => {
+  res.send('This is the signup page.');
+});
+
+//GET REQUEST -> SIGNUP_1
+app.get('/signup_1', (req, res) => {
+  res.send('This is signup_1 page, takes your names.');
+});
+
+//GET REQUEST -> HOBBIES
+app.get('/hobbies', (req, res) => {
+  res.send('This is th ehobbies page, to know you more, we coollect your interests and some info about you which is not mandatory to be filled.');
+});
+
+//GET REQUEST -> PIC
+app.get('/pic', (req, res) => {
+  res.send('This is where you can upload your pictures.');
+});
+
+//GET REQUEST -> UPDATE PSSWORD
+app.get('/update', (req, res) => {
+  res.send('You can update your account password');
+});
+
+//GET REQUEST -> QUIZ
+app.get('/quiz', (req, res) => {
+  res.send('This is the quiz section.');
+});
+
+//GET REQUEST -> CHAT
+app.get('/chat', (req, res) => {
+  res.send('This is the chat section.');
+});
+
+//GET REQUEST -> DELETE USER
+app.get('/deluser', (req, res) => {
+  res.send('You can delete your profile in case you decide to remove your account');
+});
+
+//GET REQUEST -> CONFIRMATION OF DELETION
+app.get('/sure', (req, res) => {
+  res.send('You can choose to confirm or cancel the deletion request for your account.');
+});
+
+//GET REQUEST -> MATCH REQUEST
+app.get('/match', (req, res) => {
+  res.send('You can view profiles of anybody who has sent a match request');
+});
+
+/**********************************************************************************************************/
 const userSchema = new mongoose.Schema({
   email: { type: String, unique: true, required:true },
   password: { type: String, required:true }
 });
 const User = mongoose.model('User', userSchema, 'users');
+
 
   // POST REQUEST -> SIGNUP
 
@@ -489,6 +151,7 @@ app.post('/signup', async (req, res) => {
   }
 });
 
+/**********************************************************************************************************/
 
 // POST REQUEST =>LOGIN
 
@@ -515,7 +178,7 @@ app.post('/login', async (req, res) => {
   }
 });
 
-
+/**********************************************************************************************************/
 
 //DELETE REQUEST => DELETE A USER ACCOUNT 
 
@@ -537,6 +200,8 @@ app.delete('/deleteUser', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+/**********************************************************************************************************/
 
 //NAMES SAVING IN DATABASE
 
@@ -560,6 +225,7 @@ app.post('/signup_1', async (req, res) => {
     res.send(error);
   }
 });
+
 //GET REQUEST => NAMES
   app.get('/get-name', async (req, res) => {
     try {
@@ -571,6 +237,7 @@ app.post('/signup_1', async (req, res) => {
     }
   })
 
+  /**********************************************************************************************************/
 
 const interestSchema = new mongoose.Schema({
   interest: { type: String },
@@ -578,6 +245,8 @@ const interestSchema = new mongoose.Schema({
 });
 
 const Interest = mongoose.model('Interest', interestSchema, 'hobbies');
+
+//POST REQUEST -> HOBBIES
 
 app.post('/hobbies', async (req, res) => {
   const { interest, info } = req.body;
@@ -592,76 +261,115 @@ app.post('/hobbies', async (req, res) => {
   }
 });
 
+/**********************************************************************************************************/
+
+//POST REQUEST -> PICTURE UPLOADING
 
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/'); // Uploads directory
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************************************************************************************************/
+
+//PATCH REQUEST ->  UPDATION OF PASSWORD
+
+
+
+app.post('/updatepwd', async (req, res) => {
+  const { currentPassword, newPassword, confirmPassword } = req.body;
+  const isPasswordMatch = await bcrypt.compare(currentPassword, User.password);
+  if (!isPasswordMatch) {
+    return res.status(400).json({ error: 'Incorrect current password' });
+  }
+
+  // Check if the new password and confirm password match
+  if (newPassword !== confirmPassword) {
+    return res.status(400).json({ error: 'New password and confirm password do not match' });
+  }
+
+  // Hash the new password
+  const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+  // Update the user's password in the database
+  user.password = hashedPassword;
+  await user.save();
+
+  res.status(200).json({ message: 'Password updated successfully' });
 });
 
 
 
 
 
-const upload = multer({ storage: storage });
-const picSchema = new mongoose.Schema({
-  filename: String,
-  path: String,
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************************************************************************************************/
+
+// POST REQUEST -> SUCCESSFUL SUBSCRIPTION
+const subSchema = new mongoose.Schema({
+  email: { type: String, unique: true, required: true },
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true }
 });
-const Pic = mongoose.model('Pic', picSchema, 'pics');
-app.post('/pic', upload.single('image'), async (req, res) => {
+
+const Sub = mongoose.model('Sub', subSchema, 'subscriptions');
+
+app.post('/bff', async (req, res) => {
+  const { email, firstName, lastName } = req.body;
+  if (firstName === lastName) {
+    return res.status(400).json({ error: 'First name and last name cannot be the same' });
+  }
   try {
-    console.log('Before processing image upload');
-    const newPic = new Pic({
-      filename: req.file.filename,
-      path: req.file.path,
-    });
-    await newPic.save();
-    res.status(201).json({ message: 'Image uploaded successfully' });
-    console.log('After processing image upload');
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ error });
+    }
+    const newSub = new Sub({ email, firstName, lastName });
+    await newSub.save(); // Fix here: Use newSub instead of newUser
+    res.status(201).json({ message: 'Subscription Successful' });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
-//Logout
+
+
+
+/**********************************************************************************************************/
+
+//GET REQUEST -> LOGOUT
 app.get("/myProfile", (req, res) => {
   res.send('Logged out');
 });
+
+/**********************************************************************************************************/
 
 // Empty Route
 app.get('/*', (req, res) => {
   res.send('The route does not exist');
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/**********************************************************************************************************/
