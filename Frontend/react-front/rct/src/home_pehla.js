@@ -403,17 +403,6 @@ export default function SimpleContainer() {
     </Container>
   </Box>
 </Container>
-
-
-
-
-
-
-
-
-  
-
-
     </React.Fragment>
     </div>
   );

@@ -3,11 +3,6 @@
 background: linear-gradient(143deg, rgba(255,0,0,0.5) 10%, rgba(240,157,157,0.38) 25%, rgba(255,0,0,0.5) 40%, rgba(240,157,157,0.38) 55%, rgba(255,0,0,0.5) 70%, rgba(240,157,157,0.38) 85%, rgba(255,0,0,0.5) 100%);  height: 100vh;
     width: 100vw;
   }
-/*
-  background: rgb(240,157,157);
-background: linear-gradient(158deg, rgba(240,157,157,1) 10%, rgba(157,214,240,0.38) 25%, rgba(240,157,157,1) 40%, rgba(157,214,240,0.38) 55%, rgba(240,157,157,1) 70%, rgba(157,214,240,0.38) 85%, rgba(240,157,157,1) 100%);
-
-*/
 #bg{
     background: #f09d9d;
 }

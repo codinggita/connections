@@ -19,6 +19,7 @@ import Sure from './sure';
 import Request from './match_req';
 import Chat from './chat';
 import Upma from './App';
+import UpdatePWD from './updatepwd';
 //import Text from './server';
 import reportWebVitals from './reportWebVitals';
 import{BrowserRouter, Routes, Route } from "react-router-dom";
@@ -49,6 +50,7 @@ root.render(
         <Route path = "/quiz" element={<Upma/>}/>
         <Route path = "/chat" element={<Chat/>}/>
         <Route path = "/subscription" element={<Success/>}/>
+        <Route path = "/update" element = {<UpdatePWD/>}/>
         <Route path = "/*" element={<p>No Route Found Here</p>}/>
 
         

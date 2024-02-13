@@ -40,6 +40,9 @@ export default function Profile(){
   <Link to="/login" style={{ textDecoration: 'none', color: 'black' ,fontFamily:'-moz-initial'}}>Logout</Link>
 </Button>
 <Button color="inherit" sx={{width:'15vh',background: 'linear-gradient(217deg, rgba(242,0,0,1) 0%, rgba(245,75,75,1) 17%, rgba(242,0,0,1) 34%,rgba(245,75,75,1) 50%, rgba(242,0,0,1) 67%, rgba(245,75,75,1) 84%, rgba(242,0,0,1) 100%)', color: 'white', fontWeight: 'bold', mx: 2, borderRadius:'10px',height:50 }}>
+  <Link to="/update" style={{ textDecoration: 'none', color: 'black' ,fontFamily:'-moz-initial'}}>Update Password</Link>
+</Button>
+<Button color="inherit" sx={{width:'15vh',background: 'linear-gradient(217deg, rgba(242,0,0,1) 0%, rgba(245,75,75,1) 17%, rgba(242,0,0,1) 34%,rgba(245,75,75,1) 50%, rgba(242,0,0,1) 67%, rgba(245,75,75,1) 84%, rgba(242,0,0,1) 100%)', color: 'white', fontWeight: 'bold', mx: 2, borderRadius:'10px',height:50 }}>
   <Link to="/sure" style={{ textDecoration: 'none', color: 'black' ,fontFamily:'-moz-initial'}}>Delete</Link>
 </Button>
 </div>
@@ -48,3 +51,5 @@ export default function Profile(){
                 
     );
 };
+
+
